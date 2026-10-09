@@ -19,7 +19,7 @@ Already included: `assets/cv.pdf`, `assets/resume.pdf`, and the papers under `pa
 - `papers/scope_economies.pdf`: scope economies paper with Fan, Xu, and Yang
 - `papers/ev_nevi.pdf`: title page and abstract of the EV charging paper; replace with the full paper when ready
 
-Still to add: `assets/photo.jpg`, a headshot cropped to about 300 x 337 px. Until it exists the home page shows a "WH" box.
+The headshot is `assets/photo.jpg` (600 x 674 px, the 300 x 337 frame at double resolution). To change it, replace the file with the same name.
 
 ## Steps (no git needed, about 20 minutes)
 
