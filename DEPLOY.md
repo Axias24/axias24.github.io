@@ -2,14 +2,14 @@
 
 ## What is in this folder
 
-The site follows the department's job market website template: four pages (Home, CV, Research, Teaching) with navigation at the top right, a home page with name, photo, professional summary, and contact information, the CV viewable in the browser, and paper titles linked to the papers.
+The site follows the department job market website template in the format current UMD candidates use: EB Garamond throughout, site name at top left and the pages (Home, Curriculum Vitae, Research, Teaching) at top right, name heading with photo on the left and text on the right on Home, bold section headings with dark-red paper titles, status bullets, and abstracts that open with the arrow on Research, and course lists on Teaching. The CV is viewable in the browser.
 
-- `index.html`: Home. Summary, job market paper, about, experience, methods and tools, contact, references, placement directors.
+- `index.html`: Home. Welcome, research summary, CV and resume links, contact.
 - `cv.html`: the CV, displayed page by page in the browser, plus download buttons.
 - `research.html`: job market paper, working papers, work in progress.
 - `teaching.html`: instructor course and teaching assistant courses.
 - `assets/site.css`: the styling for all four pages.
-- `assets/fonts/`: the three typefaces, self-hosted.
+- `assets/fonts/`: EB Garamond, self-hosted.
 - `assets/vendor/`: PDF.js, which draws the CV on the CV page in every browser, including phones.
 - `.nojekyll`: tells GitHub Pages to serve the files as they are.
 

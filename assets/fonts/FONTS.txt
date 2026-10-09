@@ -1,3 +1,2 @@
-Newsreader (Production Type) and IBM Plex Sans / IBM Plex Mono (IBM).
-Both families are licensed under the SIL Open Font License 1.1 and may be self-hosted.
-Files here are Latin subsets in woff2 format.
+EB Garamond (Georg Duffner and Octavio Pardo), SIL Open Font License 1.1.
+Latin subset, variable weight, from the Fontsource package.
