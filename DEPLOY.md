@@ -13,12 +13,13 @@ The site follows the department job market website template in the format curren
 - `assets/vendor/`: PDF.js, which draws the CV on the CV page in every browser, including phones.
 - `.nojekyll`: tells GitHub Pages to serve the files as they are.
 
-Already included: `assets/cv.pdf` (converted from CV_Huang_Wantian.docx) and `assets/resume.pdf`. When either changes, replace the file with the same name.
+Already included: `assets/cv.pdf`, `assets/resume.pdf`, and the papers under `papers/`. The CV links each paper title to these addresses, so keep the file names when you replace a file:
 
-Still to add:
+- `papers/huang_jmp.pdf`: job market paper (https://wantian-huang.com/papers/huang_jmp.pdf)
+- `papers/scope_economies.pdf`: scope economies paper with Fan, Xu, and Yang
+- `papers/ev_nevi.pdf`: title page and abstract of the EV charging paper; replace with the full paper when ready
 
-- `assets/photo.jpg`: headshot, portrait crop 4:5, at least 480 x 600 px. Until it exists the home page shows a "WH" monogram.
-- The job market paper PDF, when the draft is ready: see `assets/papers/README.txt`. Until then the research page says "Draft available on request."
+Still to add: `assets/photo.jpg`, a headshot cropped to about 300 x 337 px. Until it exists the home page shows a "WH" box.
 
 ## Steps (no git needed, about 20 minutes)
 
