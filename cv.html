@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Curriculum Vitae · Wantian Huang</title>
+<meta name="description" content="Curriculum vitae of Wantian Huang, Ph.D. candidate in economics at the University of Maryland.">
+<meta property="og:title" content="Curriculum Vitae · Wantian Huang">
+<meta property="og:description" content="Curriculum vitae of Wantian Huang, Ph.D. candidate in economics at the University of Maryland.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23A6192E'/%3E%3Ctext x='32' y='43' font-family='Georgia,serif' font-size='30' font-weight='600' text-anchor='middle' fill='%23fff'%3EWH%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<a class="skip" href="#content">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="./">Wantian Huang</a>
+    <nav aria-label="Site">
+      <ul class="nav">
+        <li><a href="./">Home</a></li>
+        <li><a href="cv.html" aria-current="page">CV</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="content">
+  <header class="page-head">
+    <div class="wrap">
+      <p class="label">Wantian Huang · Economics, University of Maryland</p>
+      <h1>Curriculum Vitae</h1>
+      <div class="actions">
+        <a class="btn primary" href="assets/cv.pdf">Download CV (PDF)</a>
+        <a class="btn ghost" href="assets/resume.pdf">Resume (PDF)</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="viewer" aria-label="CV">
+    <div class="wrap">
+      <div class="cv-pages" id="cv-pages">
+        <p class="pdf-fallback" id="cv-status">Loading the CV…</p>
+      </div>
+    </div>
+  </section>
+  <script src="assets/vendor/pdf.min.js"></script>
+  <script>
+  (function () {
+    var box = document.getElementById('cv-pages');
+    var fallback = '<p class="pdf-fallback">The CV could not be displayed here. <a href="assets/cv.pdf">Open the CV (PDF)</a>.</p>';
+    if (!window.pdfjsLib) { box.innerHTML = fallback; return; }
+    pdfjsLib.GlobalWorkerOptions.workerSrc = 'assets/vendor/pdf.worker.min.js';
+    pdfjsLib.getDocument('assets/cv.pdf').promise.then(async function (pdf) {
+      var width = box.clientWidth, ratio = Math.min(window.devicePixelRatio || 1, 2);
+      box.innerHTML = '';
+      for (var i = 1; i <= pdf.numPages; i++) {
+        var page = await pdf.getPage(i);
+        var scale = width / page.getViewport({ scale: 1 }).width;
+        var vp = page.getViewport({ scale: scale * ratio });
+        var canvas = document.createElement('canvas');
+        canvas.width = Math.floor(vp.width); canvas.height = Math.floor(vp.height);
+        canvas.setAttribute('role', 'img');
+        canvas.setAttribute('aria-label', 'CV, page ' + i + ' of ' + pdf.numPages);
+        box.appendChild(canvas);
+        await page.render({ canvasContext: canvas.getContext('2d'), viewport: vp }).promise;
+      }
+    }).catch(function () { box.innerHTML = fallback; });
+  })();
+  </script>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>Wantian Huang · Department of Economics, University of Maryland</span>
+    <span>Last updated October 2026</span>
+  </div>
+</footer>
+</body>
+</html>

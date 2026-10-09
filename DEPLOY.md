@@ -1,0 +1,55 @@
+# Putting the site on GitHub Pages
+
+## What is in this folder
+
+The site follows the department's job market website template: four pages (Home, CV, Research, Teaching) with navigation at the top right, a home page with name, photo, professional summary, and contact information, the CV viewable in the browser, and paper titles linked to the papers.
+
+- `index.html`: Home. Summary, job market paper, about, experience, methods and tools, contact, references, placement directors.
+- `cv.html`: the CV, displayed page by page in the browser, plus download buttons.
+- `research.html`: job market paper, working papers, work in progress.
+- `teaching.html`: instructor course and teaching assistant courses.
+- `assets/site.css`: the styling for all four pages.
+- `assets/fonts/`: the three typefaces, self-hosted.
+- `assets/vendor/`: PDF.js, which draws the CV on the CV page in every browser, including phones.
+- `.nojekyll`: tells GitHub Pages to serve the files as they are.
+
+Already included: `assets/cv.pdf` (converted from CV_Huang_Wantian.docx) and `assets/resume.pdf`. When either changes, replace the file with the same name.
+
+Still to add:
+
+- `assets/photo.jpg`: headshot, portrait crop 4:5, at least 480 x 600 px. Until it exists the home page shows a "WH" monogram.
+- The job market paper PDF, when the draft is ready: see `assets/papers/README.txt`. Until then the research page says "Draft available on request."
+
+## Steps (no git needed, about 20 minutes)
+
+1. Sign in to GitHub as Axias24.
+2. New repository. Name it exactly `axias24.github.io`. Public. Create.
+3. Add file > Upload files. Drag the four `.html` files, `.nojekyll`, and the whole `assets` folder into the upload area (dragging a folder keeps its structure). Commit changes.
+   `.nojekyll` is a hidden file. On a Mac, press Cmd+Shift+. in Finder to see it; on Windows, turn on hidden items in the View menu. If it will not upload, create it in the repository instead: Add file > Create new file, name it `.nojekyll`, leave it empty, commit.
+4. Settings > Pages > Build and deployment: Source "Deploy from a branch", branch `main`, folder `/ (root)`, Save. The site goes live at `https://axias24.github.io` within a few minutes.
+5. Open it in an incognito window. Click through all four pages, the CV page, every PDF link, and the photo. Then open it on your phone.
+
+## Updating
+
+- Text: open the page's `.html` file in the repository, click the pencil icon, edit, commit. Live in about a minute.
+- New CV, resume, or paper: upload the PDF again with the same file name; it replaces the old one, and the CV page shows the new version automatically.
+- Footer date: each of the four pages has "Last updated" at the bottom.
+
+## Check before it goes live
+
+- The one-line summary under the job market paper title on the home page is my wording. Make sure it says what the paper says.
+- The ECON 461 description on the teaching page is generic to the course title. Adjust it to your syllabus.
+- The course numbers in the teaching table came from your ELMS list. Glance over them.
+
+Everything else (abstract, paper descriptions, Amazon and research assistant descriptions, methods, placement directors) is taken from the current CV and resume.
+
+## Custom domain (later)
+
+1. Buy the domain (for example `wantianhuang.com`) at any registrar.
+2. In the repository: Settings > Pages > Custom domain, enter `www.wantianhuang.com`, Save. GitHub adds a `CNAME` file to the repository.
+3. At the registrar's DNS settings: a `CNAME` record for `www` pointing to `axias24.github.io`, and four `A` records for the bare domain pointing to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
+4. Back in Settings > Pages, tick "Enforce HTTPS" once it becomes available (can take up to a day).
+
+## Where the link goes
+
+The department CV keeps the Google Sites address. Put this address on the resume, on LinkedIn (Contact info > Website), in your email signature, and as a one-line link on the Google Sites home page.
