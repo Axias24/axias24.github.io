@@ -15,7 +15,7 @@ The site follows the department job market website template in the format curren
 
 Already included: `assets/cv.pdf`, `assets/resume.pdf`, and the papers under `papers/`. The CV links each paper title to these addresses, so keep the file names when you replace a file:
 
-- `papers/huang_jmp.pdf`: job market paper (https://wantian-huang.com/papers/huang_jmp.pdf)
+- `papers/huang_jmp.pdf`: title page and abstract of the job market paper with "Paper available upon request" (https://wantian-huang.com/papers/huang_jmp.pdf). The full paper must not be posted because of the NielsenIQ data terms; the website itself does not link to this file
 - `papers/scope_economies.pdf`: scope economies paper with Fan, Xu, and Yang
 - `papers/ev_nevi.pdf`: title page and abstract of the EV charging paper; replace with the full paper when ready
 
